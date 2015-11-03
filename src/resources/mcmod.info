@@ -1,0 +1,16 @@
+[
+{
+  "modid": "autolever",
+  "name": "AutoLever",
+  "description": "Self-Resetting customizable lever.",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Zerbruz"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
