@@ -2,7 +2,7 @@ package com.zerapps.autolever.blocks;
 
 import java.util.Random;
 
-import com.zerapps.autolever.tileentity.ModTileEntity;
+import com.zerapps.autolever.tileentity.AutoTileEntity;
 import com.zerapps.autolever.util.ModBlocks;
 import com.zerapps.autolever.util.ModReferences;
 import com.zerapps.autolever.util.handler.ChatHandler;
@@ -40,7 +40,7 @@ public class AutoLeverBlock extends BlockLever implements ITileEntityProvider
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta)
 	{
-		return new ModTileEntity();
+		return new AutoTileEntity();
 	}
 	
 	/**
@@ -91,7 +91,7 @@ public class AutoLeverBlock extends BlockLever implements ITileEntityProvider
 	 * @param tileEntity The block tile entity.
 	 * @param player The player who used the lever.
 	 */
-	private void changeDelay(ModTileEntity tileEntity, EntityPlayer player)
+	private void changeDelay(AutoTileEntity tileEntity, EntityPlayer player)
 	{
 		switch (resetDelay)
 		{
@@ -138,7 +138,7 @@ public class AutoLeverBlock extends BlockLever implements ITileEntityProvider
 	{
 	    if (!world.isRemote)
 	    {
-	    	ModTileEntity tileEntity = (ModTileEntity) world.getTileEntity(x, y, z);
+	    	AutoTileEntity tileEntity = (AutoTileEntity) world.getTileEntity(x, y, z);
 	    	resetDelay = tileEntity.getLeverDelay();
 	    	
 	    	// Get the item in player's hand.
