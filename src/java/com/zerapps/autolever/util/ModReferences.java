@@ -1,4 +1,4 @@
-package com.zerapps.autolever.lib;
+package com.zerapps.autolever.util;
 
 public final class ModReferences
 {
