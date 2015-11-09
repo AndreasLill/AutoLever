@@ -6,7 +6,7 @@ Well, this is the perfect mod for you!
 
 # Download
 
-[MC-1.7.10] - https://www.dropbox.com/s/3aktiud4arkh4jw/AutoLever-1.0.1.jar
+https://github.com/AndreasLill/AutoLever/releases
 
 # How To Craft
 The lever is crafted using 1 redstone above 1 lever directly inside the inventory or a crafting table.
