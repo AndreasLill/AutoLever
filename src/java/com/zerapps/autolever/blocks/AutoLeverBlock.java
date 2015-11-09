@@ -82,6 +82,37 @@ public class AutoLeverBlock extends BlockLever implements ITileEntityProvider
                 world.setBlockMetadataWithNotify(x, y, z, metadata & 7, 3);
                 world.playSoundEffect((double)x + 0.5D, (double)y + 0.5D, (double)z + 0.5D, "random.click", 0.3F, 0.5F);
                 world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
+                world.notifyBlocksOfNeighborChange(x, y, z, this);
+                
+                int j1 = metadata & 7;
+                
+                if (j1 == 1)
+		        {
+		        	world.notifyBlocksOfNeighborChange(x - 1, y, z, this);
+		        }
+		        else if (j1 == 2)
+		        {
+		        	world.notifyBlocksOfNeighborChange(x + 1, y, z, this);
+		        }
+		        else if (j1 == 3)
+		        {
+		        	world.notifyBlocksOfNeighborChange(x, y, z - 1, this);
+		        }
+		        else if (j1 == 4)
+		        {
+		        	world.notifyBlocksOfNeighborChange(x, y, z + 1, this);
+		        }
+		        else if (j1 != 5 && j1 != 6)
+		        {
+		            if (j1 == 0 || j1 == 7)
+		            {
+		            	world.notifyBlocksOfNeighborChange(x, y + 1, z, this);
+		            }
+		        }
+		        else
+		        {
+		        	world.notifyBlocksOfNeighborChange(x, y - 1, z, this);
+		        }
             }
         }
     }
