@@ -1,1 +1,5 @@
 /bin/
+
+.gradle/2.7/taskArtifacts/fileHashes.bin
+.gradle/2.7/taskArtifacts/cache.properties
+.gradle/gradle.log
